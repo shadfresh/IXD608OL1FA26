@@ -5,6 +5,8 @@
     --color-ivory: #F1ECE4;
     --color-copper: #B98555;
     --color-offwhite: #F4F4F4;
+    --color-warning: #A33A32;
+    --color-success: #4F6B52;
 
     --font-heading: Georgia, "Times New Roman", serif;
     --font-body: Arial, Helvetica, sans-serif;
@@ -20,6 +22,7 @@ body {
     color: var(--color-charcoal);
     font-family: var(--font-body);
     line-height: 1.5;
+    margin: 0;
 }
 
 h1,
@@ -41,10 +44,26 @@ a {
 .navbar {
     background-color: var(--color-charcoal);
     color: var(--color-ivory);
+    padding: 1rem;
+}
+
+.navbar h1 {
+    margin: 0;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin-left: 1rem;
 }
 
 .navbar a {
     color: var(--color-ivory);
+    text-decoration: none;
 }
 
 .navbar a:hover {
@@ -92,6 +111,7 @@ a {
     font-family: var(--font-body);
     font-weight: bold;
     cursor: pointer;
+    margin: 0.25rem;
 }
 
 .button-primary {
@@ -108,6 +128,26 @@ a {
     background-color: transparent;
     color: var(--color-charcoal);
     border: 2px solid var(--color-charcoal);
+}
+
+.button-danger {
+    background-color: var(--color-warning);
+    color: white;
+}
+
+.button-disabled {
+    background-color: #ddd;
+    color: #999;
+    cursor: not-allowed;
+}
+
+.button-hero {
+    background-color: var(--color-copper);
+    color: var(--color-charcoal);
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 
@@ -148,4 +188,170 @@ a {
 
 .spacing-large {
     padding: 2rem;
+}
+
+
+/* FORMS */
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: bold;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+    padding: 0.8rem 1rem;
+    border: 2px solid #d6d0c7;
+    border-radius: 0.4rem;
+    background-color: white;
+    color: var(--color-charcoal);
+    font-family: var(--font-body);
+    font-size: 1rem;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--color-copper);
+}
+
+.form-control::placeholder {
+    color: #888;
+}
+
+
+/* HERO INPUT */
+
+.input-hero {
+    max-width: 750px;
+    padding: 1rem 1.25rem;
+    font-size: 1.2rem;
+}
+
+
+/* MONEY INPUT */
+
+.money-field {
+    position: relative;
+    max-width: 600px;
+}
+
+.money-symbol {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-copper);
+    font-weight: bold;
+}
+
+.money-field .form-control {
+    padding-left: 2.5rem;
+}
+
+
+/* INPUT STATES */
+
+.input-warning {
+    border-color: var(--color-warning);
+}
+
+.input-success {
+    border-color: var(--color-success);
+}
+
+.form-message {
+    display: block;
+    margin-top: 0.35rem;
+    font-size: 0.9rem;
+}
+
+.warning-message {
+    color: var(--color-warning);
+}
+
+.success-message {
+    color: var(--color-success);
+}
+
+
+/* CHECKBOXES AND RADIO BUTTONS */
+
+.control-group {
+    margin-bottom: 1.5rem;
+}
+
+.control-option {
+    display: inline-block;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.control-option input {
+    margin-right: 0.4rem;
+    accent-color: var(--color-copper);
+}
+
+
+/* SELECT MENU */
+
+select.form-control {
+    cursor: pointer;
+}
+
+
+/* TOGGLE */
+
+.toggle-control {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.toggle-control input {
+    accent-color: var(--color-copper);
+}
+
+
+/* ALERTS */
+
+.alert {
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    border-left: 5px solid var(--color-charcoal);
+    background-color: var(--color-offwhite);
+}
+
+.alert-success {
+    border-left-color: var(--color-success);
+}
+
+.alert-warning {
+    border-left-color: var(--color-warning);
+}
+
+.alert-info {
+    border-left-color: var(--color-copper);
+}
+
+
+/* FORMS STYLE GUIDE AREA */
+
+.form-demo {
+    background-color: var(--color-offwhite);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-demo h3 {
+    margin-top: 0;
 }

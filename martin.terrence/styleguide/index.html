@@ -53,6 +53,7 @@
                 <li><a href="#navigation">Navigation</a></li>
                 <li><a href="#buttons">Buttons</a></li>
                 <li><a href="#cards">Cards</a></li>
+                <li><a href="#forms">Forms &amp; Inputs</a></li>
             </ul>
 
         </div>
@@ -239,6 +240,193 @@
                     earth and autumn.
                 </p>
                 <a href="#">Explore Fall Alchemy</a>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- FORMS -->
+    <div class="container style-section" id="forms">
+        <div class="card soft">
+
+            <h2>Forms &amp; Inputs</h2>
+
+            <p>
+                Form elements are designed for the Gemwhiz shopping
+                experience, including product search, checkout,
+                customer information and product options.
+            </p>
+
+
+            <!-- BASIC INPUTS -->
+            <h2>Basic Inputs</h2>
+
+            <div class="form-control">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Terrence Martin">
+            </div>
+
+            <div class="form-control">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="you@example.com">
+            </div>
+
+            <div class="form-control">
+                <label for="search">Search</label>
+                <input type="search" id="search" placeholder="Search gemstones...">
+            </div>
+
+
+            <!-- INPUT VARIATIONS -->
+            <h2>Input Variations</h2>
+
+            <div class="form-control">
+                <label for="price">Money Input</label>
+
+                <div class="money-input">
+                    <span>$</span>
+                    <input type="number" id="price" placeholder="45.00">
+                </div>
+            </div>
+
+            <div class="form-control">
+                <label for="coupon">Warning Input</label>
+                <input
+                    type="text"
+                    id="coupon"
+                    class="input-warning"
+                    value="Invalid coupon code"
+                >
+
+                <span class="form-message warning-message">
+                    Please check the information and try again.
+                </span>
+            </div>
+
+            <div class="form-control">
+                <label for="giftcode">Success Input</label>
+                <input
+                    type="text"
+                    id="giftcode"
+                    class="input-success"
+                    value="Gift code accepted"
+                >
+            </div>
+
+
+            <!-- BUTTON VARIATIONS -->
+            <h2>Button Variations</h2>
+
+            <div class="button-examples">
+
+                <button type="button">
+                    Basic
+                </button>
+
+                <button type="button" class="button button-primary">
+                    Shop Collection
+                </button>
+
+                <button type="button" class="button button-hero">
+                    Add to Cart
+                </button>
+
+                <button type="button" class="button button-warning">
+                    Remove Item
+                </button>
+
+                <button type="button" disabled>
+                    Sold Out
+                </button>
+
+            </div>
+
+
+            <!-- CHECKBOXES -->
+            <h2>Checkboxes</h2>
+
+            <div class="form-options">
+
+                <label>
+                    <input type="checkbox">
+                    Gift wrapping
+                </label>
+
+                <label>
+                    <input type="checkbox">
+                    Join the Gemwhiz mailing list
+                </label>
+
+                <label>
+                    <input type="checkbox">
+                    Include a gemstone meaning card
+                </label>
+
+            </div>
+
+
+            <!-- RADIO BUTTONS -->
+            <h2>Selection Controls</h2>
+
+            <div class="form-options">
+
+                <label>
+                    <input type="radio" name="finish" value="copper">
+                    Copper Finish
+                </label>
+
+                <label>
+                    <input type="radio" name="finish" value="antique">
+                    Antique Copper Finish
+                </label>
+
+            </div>
+
+
+            <!-- SELECT MENU -->
+            <h2>Select Menu</h2>
+
+            <div class="form-control">
+
+                <label for="gemstone">
+                    Choose a Gemstone
+                </label>
+
+                <select id="gemstone">
+                    <option>Select a gemstone</option>
+                    <option>Labradorite</option>
+                    <option>Carnelian</option>
+                    <option>Black Tourmaline</option>
+                    <option>Amazonite</option>
+                    <option>Lepidolite</option>
+                </select>
+
+            </div>
+
+
+            <!-- TOGGLE -->
+            <h2>Toggle Control</h2>
+
+            <label class="toggle-control">
+                <input type="checkbox">
+                Email me about new Gemwhiz drops
+            </label>
+
+
+            <!-- ALERTS -->
+            <h2>Alerts</h2>
+
+            <div class="alert alert-success">
+                Your item has been added to the cart.
+            </div>
+
+            <div class="alert alert-warning">
+                This item is almost sold out.
+            </div>
+
+            <div class="alert alert-info">
+                Your order information has been saved.
             </div>
 
         </div>
