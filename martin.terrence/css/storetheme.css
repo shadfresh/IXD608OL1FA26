@@ -1,0 +1,151 @@
+/* GEMWHIZ STORE THEME */
+
+:root {
+    --color-charcoal: #0B0B0B;
+    --color-ivory: #F1ECE4;
+    --color-copper: #B98555;
+    --color-offwhite: #F4F4F4;
+
+    --font-heading: Georgia, "Times New Roman", serif;
+    --font-body: Arial, Helvetica, sans-serif;
+
+    --spacing: 1rem;
+}
+
+
+/* BASE */
+
+body {
+    background-color: var(--color-ivory);
+    color: var(--color-charcoal);
+    font-family: var(--font-body);
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+}
+
+a {
+    color: var(--color-copper);
+}
+
+
+/* GEMWHIZ NAVIGATION */
+
+.navbar {
+    background-color: var(--color-charcoal);
+    color: var(--color-ivory);
+}
+
+.navbar a {
+    color: var(--color-ivory);
+}
+
+.navbar a:hover {
+    color: var(--color-copper);
+}
+
+
+/* BRAND COLOR EXAMPLES */
+
+.color-swatch {
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.color-charcoal {
+    background-color: var(--color-charcoal);
+    color: var(--color-ivory);
+}
+
+.color-ivory {
+    background-color: var(--color-ivory);
+    color: var(--color-charcoal);
+    border: 1px solid #ccc;
+}
+
+.color-copper {
+    background-color: var(--color-copper);
+    color: var(--color-charcoal);
+}
+
+.color-offwhite {
+    background-color: var(--color-offwhite);
+    color: var(--color-charcoal);
+}
+
+
+/* BUTTONS */
+
+.button {
+    display: inline-block;
+    padding: 0.75rem 1.25rem;
+    border: none;
+    text-decoration: none;
+    font-family: var(--font-body);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.button-primary {
+    background-color: var(--color-copper);
+    color: var(--color-charcoal);
+}
+
+.button-dark {
+    background-color: var(--color-charcoal);
+    color: var(--color-ivory);
+}
+
+.button-outline {
+    background-color: transparent;
+    color: var(--color-charcoal);
+    border: 2px solid var(--color-charcoal);
+}
+
+
+/* GEMWHIZ CARDS */
+
+.gem-card {
+    background-color: var(--color-offwhite);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.gem-card h3 {
+    margin-top: 0;
+}
+
+.gem-card-dark {
+    background-color: var(--color-charcoal);
+    color: var(--color-ivory);
+}
+
+
+/* STYLE GUIDE SPACING */
+
+.style-section {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.spacing-small {
+    padding: 0.5rem;
+}
+
+.spacing-medium {
+    padding: 1rem;
+}
+
+.spacing-large {
+    padding: 2rem;
+}
