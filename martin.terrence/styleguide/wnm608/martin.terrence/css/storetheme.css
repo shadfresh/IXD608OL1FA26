@@ -1,0 +1,580 @@
+/* GEMWHIZ STORE THEME */
+
+:root {
+    --color-charcoal: #0B0B0B;
+    --color-ivory: #F1ECE4;
+    --color-copper: #B98555;
+    --color-offwhite: #F4F4F4;
+
+    --font-heading: Georgia, "Times New Roman", serif;
+    --font-body: Arial, Helvetica, sans-serif;
+
+    --spacing: 1rem;
+}
+
+
+/* BASE */
+
+body {
+    background-color: var(--color-ivory);
+    color: var(--color-charcoal);
+    font-family: var(--font-body);
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+}
+
+a {
+    color: var(--color-copper);
+}
+
+
+/* GEMWHIZ NAVIGATION */
+
+.navbar {
+    background-color: var(--color-charcoal);
+    color: var(--color-ivory);
+}
+
+.navbar a {
+    color: var(--color-ivory);
+}
+
+.navbar a:hover {
+    color: var(--color-copper);
+}
+
+
+/* BRAND COLOR EXAMPLES */
+
+.color-swatch {
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.color-charcoal {
+    background-color: var(--color-charcoal);
+    color: var(--color-ivory);
+}
+
+.color-ivory {
+    background-color: var(--color-ivory);
+    color: var(--color-charcoal);
+    border: 1px solid #ccc;
+}
+
+.color-copper {
+    background-color: var(--color-copper);
+    color: var(--color-charcoal);
+}
+
+.color-offwhite {
+    background-color: var(--color-offwhite);
+    color: var(--color-charcoal);
+}
+
+
+/* BUTTONS */
+
+.button {
+    display: inline-block;
+    padding: 0.75rem 1.25rem;
+    border: none;
+    border-radius: 0.35rem;
+    text-decoration: none;
+    font-family: var(--font-body);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.button:hover {
+    transform: translateY(-1px);
+}
+
+.button-primary {
+    background-color: var(--color-copper);
+    color: var(--color-charcoal);
+}
+
+.button-primary:hover {
+    background-color: var(--color-charcoal);
+    color: var(--color-ivory);
+}
+
+.button-dark {
+    background-color: var(--color-charcoal);
+    color: var(--color-ivory);
+}
+
+.button-dark:hover {
+    background-color: var(--color-copper);
+    color: var(--color-charcoal);
+}
+
+.button-outline {
+    background-color: transparent;
+    color: var(--color-charcoal);
+    border: 2px solid var(--color-charcoal);
+}
+
+.button-outline:hover {
+    background-color: var(--color-charcoal);
+    color: var(--color-ivory);
+}
+
+
+/* GEMWHIZ CARDS */
+
+.gem-card {
+    background-color: var(--color-offwhite);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.gem-card h3 {
+    margin-top: 0;
+}
+
+.gem-card-dark {
+    background-color: var(--color-charcoal);
+    color: var(--color-ivory);
+}
+
+
+/* STYLE GUIDE SPACING */
+
+.style-section {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.spacing-small {
+    padding: 0.5rem;
+}
+
+.spacing-medium {
+    padding: 1rem;
+}
+
+.spacing-large {
+    padding: 2rem;
+}
+
+
+/* ========================================
+   SESSION 5 — FORMS AND INTERACTION
+   ======================================== */
+
+
+/* FORM LAYOUT */
+
+.form-example {
+    margin-bottom: 2rem;
+}
+
+.form-control {
+    margin-bottom: 1.5rem;
+}
+
+.form-control label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: bold;
+}
+
+
+/* BASIC INPUTS */
+
+.form-input,
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="number"],
+select,
+textarea {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 500px;
+    padding: 0.8rem 1rem;
+    background-color: #ffffff;
+    color: var(--color-charcoal);
+    border: 2px solid #d4cec5;
+    border-radius: 0.4rem;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* INPUT FOCUS */
+
+.form-input:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--color-copper);
+    box-shadow: 0 0 0 3px rgba(185, 133, 85, 0.2);
+}
+
+
+/* PLACEHOLDERS */
+
+input::placeholder,
+textarea::placeholder {
+    color: #888;
+}
+
+
+/* SEARCH / HOTDOG INPUT */
+
+.input-hotdog {
+    border-radius: 2rem;
+}
+
+
+/* MONEY INPUT */
+
+.money-input {
+    position: relative;
+    max-width: 500px;
+}
+
+.money-input > span {
+    display: none;
+}
+
+.money-input::before {
+    content: "$";
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-copper);
+    font-weight: bold;
+    z-index: 1;
+}
+
+.money-input input {
+    padding-left: 3rem;
+}
+
+
+/* WARNING INPUT */
+
+.input-warning {
+    border-color: #9c3f35 !important;
+    background-color: #fff0ee !important;
+}
+
+.form-warning {
+    display: block;
+    margin-top: 0.4rem;
+    color: #8f352c;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+
+/* SUCCESS INPUT */
+
+.input-success {
+    border-color: #54785a !important;
+    background-color: #eef6ef !important;
+}
+
+
+/* TEXTAREA */
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+
+/* ========================================
+   FORM BUTTON VARIATIONS
+   ======================================== */
+
+.button-demo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 1rem 0 2rem;
+}
+
+.form-button {
+    padding: 0.75rem 1.25rem;
+    border: none;
+    border-radius: 0.35rem;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.form-button:hover {
+    transform: translateY(-1px);
+}
+
+
+/* BASIC BUTTON */
+
+.button-basic {
+    background-color: var(--color-offwhite);
+    color: var(--color-charcoal);
+    border: 1px solid #ccc;
+}
+
+
+/* COPPER BUTTON */
+
+.button-copper {
+    background-color: var(--color-copper);
+    color: var(--color-charcoal);
+}
+
+.button-copper:hover {
+    background-color: var(--color-charcoal);
+    color: var(--color-ivory);
+}
+
+
+/* HERO BUTTON */
+
+.button-hero {
+    background-color: var(--color-copper);
+    color: var(--color-charcoal);
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+}
+
+.button-hero:hover {
+    background-color: var(--color-charcoal);
+    color: var(--color-ivory);
+}
+
+
+/* WARNING BUTTON */
+
+.button-warning {
+    background-color: #8f352c;
+    color: #ffffff;
+}
+
+.button-warning:hover {
+    background-color: #6f2821;
+}
+
+
+/* DISABLED BUTTON */
+
+.button-disabled,
+.form-button:disabled {
+    background-color: #ddd8d0;
+    color: #999;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* ========================================
+   CHECKBOXES + RADIO CONTROLS
+   ======================================== */
+
+.check-control {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-right: 1.25rem;
+    margin-bottom: 0.75rem;
+    cursor: pointer;
+}
+
+.check-control input[type="checkbox"],
+.check-control input[type="radio"] {
+    width: 1.2rem;
+    height: 1.2rem;
+    accent-color: var(--color-copper);
+    cursor: pointer;
+}
+
+.check-control span {
+    font-family: var(--font-body);
+}
+
+
+/* SELECT MENU */
+
+select.form-input {
+    cursor: pointer;
+    appearance: auto;
+}
+
+
+/* ========================================
+   TOGGLE CONTROL
+   ======================================== */
+
+.toggle-example {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 1rem 0 2rem;
+}
+
+.toggle {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.toggle input {
+    display: none;
+}
+
+.toggle-slider {
+    position: relative;
+    width: 50px;
+    height: 26px;
+    background-color: #c8c2ba;
+    border-radius: 20px;
+    transition: 0.25s ease;
+}
+
+.toggle-slider::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 3px;
+    left: 3px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    transition: 0.25s ease;
+}
+
+.toggle input:checked + .toggle-slider {
+    background-color: var(--color-copper);
+}
+
+.toggle input:checked + .toggle-slider::before {
+    transform: translateX(24px);
+}
+
+
+/* ========================================
+   ALERTS
+   ======================================== */
+
+.alert {
+    padding: 1rem 1.25rem;
+    margin: 1rem 0;
+    border-radius: 0.4rem;
+    border-left: 5px solid;
+    font-weight: bold;
+}
+
+
+/* BASIC ALERT */
+
+.alert-basic {
+    background-color: var(--color-charcoal);
+    border-color: var(--color-copper);
+    color: var(--color-ivory);
+}
+
+
+/* WARNING ALERT */
+
+.alert-warning {
+    background-color: #fff3e8;
+    border-color: var(--color-copper);
+    color: #704921;
+}
+
+
+/* SUCCESS ALERT */
+
+.alert-success {
+    background-color: #eef6ef;
+    border-color: #54785a;
+    color: #35513a;
+}
+
+
+/* DANGER ALERT */
+
+.alert-danger {
+    background-color: #fff0ee;
+    border-color: #9c3f35;
+    color: #702d26;
+}
+
+
+/* ========================================
+   FORM SECTION POLISH
+   ======================================== */
+
+#forms h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+#forms .form-example {
+    margin-bottom: 2rem;
+}
+
+
+/* RESPONSIVE FORM DESIGN */
+
+@media (max-width: 600px) {
+
+    .form-input,
+    input[type="text"],
+    input[type="email"],
+    input[type="search"],
+    input[type="number"],
+    select,
+    textarea {
+        max-width: 100%;
+    }
+
+    .button-demo {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .form-button {
+        width: 100%;
+    }
+
+    .check-control {
+        display: flex;
+        margin-right: 0;
+    }
+
+    .toggle-example {
+        align-items: flex-start;
+    }
+}

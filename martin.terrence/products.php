@@ -1,23 +1,22 @@
 
 <?php
-// GEMWHIZ - Product List
-// Connect to the private MySQL database configuration.
-
+// GEMWHIZ — Product Collection
+// Connect to the existing MySQL database.
 require_once dirname(__DIR__, 3) . '/private_config/database.php';
 
-// Retrieve all products from the database.
+// Retrieve all products.
 $sql = "SELECT * FROM products ORDER BY id ASC";
 $result = $conn->query($sql);
 
-// Include the website header.
+// Load the website header.
 include __DIR__ . '/parts/header.php';
 ?>
 
 <section class="shop-intro">
     <h2>Shop GEMWHIZ</h2>
     <p>
-        Explore handcrafted gemstone jewelry inspired
-        by nature, creativity, and magic.
+        Explore handcrafted gemstone jewelry inspired by
+        nature, creativity, and magic.
     </p>
 </section>
 
@@ -33,23 +32,36 @@ include __DIR__ . '/parts/header.php';
                 <article class="product-card">
 
                     <div class="product-image">
-                        <p>Professional Photo Coming Soon</p>
+                        <?php if (!empty($product['image'])): ?>
+
+                            <img
+                                src="img/<?= rawurlencode(basename($product['image'])) ?>"
+                                alt="<?= htmlspecialchars($product['name'], ENT_QUOTES, 'UTF-8') ?>"
+                                loading="lazy"
+                                style="width:100%; height:240px; object-fit:contain;"
+                            >
+
+                        <?php else: ?>
+
+                            <p>Photo Coming Soon</p>
+
+                        <?php endif; ?>
                     </div>
 
                     <h3>
-                        <?php echo htmlspecialchars($product['name']); ?>
+                        <?= htmlspecialchars($product['name'], ENT_QUOTES, 'UTF-8') ?>
                     </h3>
 
-                    <p class="product-description">
-                        <?php echo htmlspecialchars($product['description']); ?>
+                    <p>
+                        <?= htmlspecialchars($product['description'], ENT_QUOTES, 'UTF-8') ?>
                     </p>
 
                     <p class="product-price">
-                        $<?php echo number_format((float)$product['price'], 2); ?>
+                        $<?= number_format((float)$product['price'], 2) ?>
                     </p>
 
                     <a
-                        href="product.php?id=<?php echo (int)$product['id']; ?>"
+                        href="product.php?id=<?= (int)$product['id'] ?>"
                         class="button"
                     >
                         View Product
@@ -69,6 +81,10 @@ include __DIR__ . '/parts/header.php';
 </section>
 
 <?php
+// Load the website footer.
 include __DIR__ . '/parts/footer.php';
+
+// Close the database connection.
 $conn->close();
 ?>
+

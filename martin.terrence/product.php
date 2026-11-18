@@ -11,7 +11,7 @@ $product = null;
 
 if ($id && $id > 0) {
     $stmt = $conn->prepare(
-        "SELECT id, name, description, price, category, quantity
+        "SELECT id, name, description, price, category, quantity, image
          FROM products
          WHERE id = ?"
     );
@@ -39,7 +39,21 @@ include __DIR__ . '/parts/header.php';
         <div class="product-detail-container">
 
             <div class="product-image">
-                <p>Professional Photo Coming Soon</p>
+
+                <?php if (!empty($product['image'])): ?>
+
+                    <img
+                        src="img/<?= htmlspecialchars(rawurlencode($product['image']), ENT_QUOTES, 'UTF-8') ?>"
+                        alt="<?= htmlspecialchars($product['name'], ENT_QUOTES, 'UTF-8') ?>"
+                        style="width:100%; max-width:550px; height:auto; object-fit:contain;"
+                    >
+
+                <?php else: ?>
+
+                    <p>Product photograph coming soon.</p>
+
+                <?php endif; ?>
+
             </div>
 
             <div class="product-info">
@@ -90,7 +104,11 @@ include __DIR__ . '/parts/header.php';
                             required
                         >
 
-                        <button type="submit" class="button">
+                        <button
+                            type="submit"
+                            name="add_to_cart"
+                            class="button"
+                        >
                             Add to Cart
                         </button>
 

@@ -1,0 +1,95 @@
+
+/* CSS REST */
+
+*, * ::after, *::before {
+	box-sizing:border-box ;
+}
+
+:root ; {
+	--color-neutral-light:#eee;
+	--color-neutral-medium:#999;
+	--color-neutral-dark:#555;
+	--header-height:3rem;
+	--spacing: 1rem;
+
+}
+
+body {
+	margin:0;
+	font-size:100% ;
+	font-family:Helvetica, Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,{
+	font-family: Georgia, "Times New Roman", serif;
+}
+
+a{
+	color:inherit;
+	font-weight: bold;
+	text-decoration: none;
+}
+a:hoover {
+	text-decoration: underline;
+}
+
+
+
+
+
+/* LAYOUT CLASSES */
+
+.container:{
+	max-width:1200px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+
+.display-flex { display:flex; }
+.display-inline-flex { display:inline-flex; }
+.display-block { display:block; }
+.display-inline-block { display:display-inline-block; }
+
+.flex-stretch { flex: 1 1 auto; }
+.flex-none { flex: none; }
+
+.flex-align-center { align-items:center; }
+.flex-justify-center { justify-content:center; }
+
+
+
+/* COMPONET CLASSES */
+
+.nav ul {
+	list-style-type:none ;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+}
+
+
+
+
+
+.navbar {
+	background-color:var (--color-neutral-dark) ;
+	color:var (--color white);
+	line-height:var (--header-height) ;
+}
+
+.navbar h1 {
+	font-size:1em;
+	margin:0;
+	font-family:  ;
+}
+
+.navbar a {
+	padding:0 1em ;
+}
